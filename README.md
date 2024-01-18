@@ -1,10 +1,8 @@
-# Restaurant_management_system
-
-## Project Video Link : https://youtu.be/cpPmBlvtdrs
+ 
 
 ## Requirement
     
-[get-pip.zip](https://github.com/7Har/Restaurant_management_system/files/6250009/get-pip.zip)
+ 
 
 
     python get-pip.py
@@ -37,5 +35,5 @@
     
 ## For  Admin login:
 
-    username:"dkp" password:"Dkp@4321"
+    username:"ts" password:"7447679060"
 
