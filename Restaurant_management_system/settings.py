@@ -23,9 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'hz8(ou+a7kq72y2@$*w1uhmo)dy_g++9lul1p*+mw%=jgw5(5f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['tejassawant.pythonanywhere.com']
+
 
 
 # Application definition
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -57,7 +59,7 @@ ROOT_URLCONF = 'Restaurant_management_system.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['Restaurant_management_system/templates'],
+        'DIRS': ['/home/Tejassawant/Food-Ordering-System---Django/Restaurant_management_system/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -129,9 +131,16 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Enable WhiteNoise compression (optional)
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# Set the location of your static files directory
+STATIC_ROOT = '/home/Tejassawant/Food-Ordering-System---Django/staticfiles'
+
 # Managing media
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+MEDIA_ROOT = '/home/Tejassawant/Food-Ordering-System---Django/media'
+
 
 
 # SMTP Configuration
@@ -140,5 +149,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'xxxx@gmail.com'   # enter you email address
-EMAIL_HOST_PASSWORD = 'xxxx'     # enter your password 
+EMAIL_HOST_USER = 'tejusawant302@gmail.com'   # enter you email address
+EMAIL_HOST_PASSWORD = 'rpct ptrv xhtf igos'     # enter your password
