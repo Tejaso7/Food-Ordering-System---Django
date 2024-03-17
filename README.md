@@ -29,11 +29,4 @@ demo link - http://tejassawant.pythonanywhere.com/
 
     username:"user" password:"user"
     
-## For  Employee login:
-
-    username:"admin" password:"123456789"
-    
-## For  Admin login:
-
-    username:"ts" password:"7447679060"
 
