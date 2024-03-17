@@ -66,7 +66,7 @@
                     {% for i in product %}
                     <div class="col-xs-3 col-sm-3 col-md-3">
                         <div class="card align-items-center" style="width: 18rem;">
-                            <img src='/media/{{i.image}}' class="card-img-top" alt="...">
+                            <img src='/media/{{i.image}}' class="card-img-top" alt="Unable to locate in database">
                             <div class="card-body">
                                 <h5 class="card-title" id="namepr{{i.id}}">{{i.product_name|slice:"0:20"}}...</h5>
                                 <h6 style="color: #ff0000">Rs. <i id="pricepr{{i.id}}">{{i.price}}</i>/-</h6>
@@ -102,7 +102,7 @@
 // console.log({{request.user.id}});
 if (localStorage.getItem('cart') == null) {
     var cart = {};
-    
+
 } else {
     cart = JSON.parse(localStorage.getItem('cart'));
     updateCart(cart);
